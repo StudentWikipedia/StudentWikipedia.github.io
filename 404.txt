@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+  <title>404 Page not found | Wikipedia, made by students!</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+  <center>
+    <h1>Whoops!</h1>
+    <br>
+    <hr>
+    <h1>Looks like we don't have that information yet...</h1>
+    <a href=./wikipedia.html>Go back to the main page</a>
+  </center>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <p>kinda embarrasing...</p>
+</body>

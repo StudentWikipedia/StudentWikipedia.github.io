@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>¡Wikipedia, hecha por estudiantes!</title>
+      <link rel="icon" type="image/png" href="favicon.png">
+      <style>
+          #search-box {
+              width: 80%; /* Makes it fit inside your sidebar */
+              padding: 5px; /* Adds space inside so text isn't squished */
+              border: 1px solid #a2a9b1; /* Wikipedia's official gray border color */
+              font-family: sans-serif;
+              margin-bottom: 10px;
+          }
+
+          #search-button {
+              background-color: #f8f9fa;
+              border: 1px solid #a2a9b1;
+              padding: 5px 10px;
+              cursor: pointer; /* Makes the mouse turn into a hand */
+          }
+          </style>
+    </head>
+  <body>
+      <div id=intro>
+          <center>
+              <h1>¡Bienvenido a Wikipedia, hecha por estudiantes!</h1>
+              <p><i>sí, no puedes cambiar la información...</i></p>
+              <div id="search-container">
+                  <input type="text" id="search-box" placeholder="Buscar Wikipedia...">
+                  <button id="search-button">Search</button>
+              </div>
+          </center>
+
+          <hr>
+          <center>
+          <div id="Languages">
+          <a href="./wikipedia.html">For English, click here!</a>
+          </div>
+          </center>
+      </div>
+
+      <script>
+          function runSearch() {
+              // 1. Get the word the user typed
+              var animal = document.getElementById("search-box").value.toLowerCase();
+
+              // 2. Go to that file! (Example: if they type "Panda", go to panda.html)
+              if (animal != "") {
+                  window.location.href = "./data-release-espanol/" + animal + ".html";
+              }
+          }
+
+          // Make the "Search" button run the code when clicked
+          document.getElementById("search-button").onclick = runSearch;
+          document.getElementById("search-box").onkeypress = function (e) {
+              if (e.keyCode == 13) { runSearch(); }
+          };
+      </script>
+  </body>
+</html>
