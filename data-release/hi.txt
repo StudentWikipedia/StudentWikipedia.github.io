@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Wikipedia, made by students!</title>
+      <link rel="icon" type="image/png" href="favicon.png">
+      <style>
+          #search-box {
+              width: 80%; /* Makes it fit inside your sidebar */
+              padding: 5px; /* Adds space inside so text isn't squished */
+              border: 1px solid #a2a9b1; /* Wikipedia's official gray border color */
+              font-family: sans-serif;
+              margin-bottom: 10px;
+          }
+
+          #search-button {
+              background-color: #f8f9fa;
+              border: 1px solid #a2a9b1;
+              padding: 5px 10px;
+              cursor: pointer; /* Makes the mouse turn into a hand */
+          }
+          </style>
+    </head>
+  <body>
+      <div id=intro>
+          <center>
+              <h1>Hi there!</h1>
+              <h1>Welcome to Wikipedia, made by students</h1>
+              <p><i>yes, you can't change information...</i></p>
+              <div id="search-container">
+                  <input type="text" id="search-box" placeholder="Search Wikipedia...">
+                  <button id="search-button">Search</button>
+                  <br>
+                  <a href="../wikipedia.html">Go back to normal.</a>
+              </div>
+          </center>
+          <center>
+          <div id="Languages">
+          <a href="../wikipedia_espanol.html">Para espanol, apreta aqui!</a>
+          </div>
+          </center>
+          <hr>
+      </div>
+
+      <script>
+          function runSearch() {
+              // 1. Get the word the user typed
+              var animal = document.getElementById("search-box").value.toLowerCase();
+
+              // 2. Go to that file! (Example: if they type "Panda", go to panda.html)
+              if (animal != "") {
+                  window.location.href = animal + ".html";
+              }
+          }
+
+          // Make the "Search" button run the code when clicked
+          document.getElementById("search-button").onclick = runSearch;
+          document.getElementById("search-box").onkeypress = function (e) {
+              if (e.keyCode == 13) { runSearch(); }
+          };
+      </script>
+  </body>
+</html>
