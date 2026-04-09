@@ -1,1 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Wikipedia, made by students!</title>
+      <link rel="icon" type="image/png" href="favicon.png">
+      <style>
+          #search-box {
+              width: 80%; /* Makes it fit inside your sidebar */
+              padding: 5px; /* Adds space inside so text isn't squished */
+              border: 1px solid #a2a9b1; /* Wikipedia's official gray border color */
+              font-family: sans-serif;
+              margin-bottom: 10px;
+          }
 
+          #search-button {
+              background-color: #f8f9fa;
+              border: 1px solid #a2a9b1;
+              padding: 5px 10px;
+              cursor: pointer; /* Makes the mouse turn into a hand */
+          }
+          </style>
+    </head>
+  <body>
+      <div id=intro>
+          <center>
+              <h1>Welcome to Wikipedia, made by students</h1>
+              <p><i>yes, you can't change information...</i></p>
+              <div id="search-container">
+                  <input type="text" id="search-box" placeholder="Search Wikipedia...">
+                  <button id="search-button">Search</button>
+              </div>
+          </center>
+
+          <hr>
+          <center>
+          <div id="Languages">
+          <a href="./wikipedia_espanol.html">Para espanol, apreta aqui!</a>
+          </div>
+          </center>
+      </div>
+     <script>
+    function runSearch() {
+        // 1. Get the word from the search box
+        var input = document.getElementById("search-box").value.toLowerCase().trim();
+        
+        if (input !== "") {
+            // 2. Go directly to the file in the data-release folder
+            // If the file doesn't exist, the browser will show its own 404 error
+            window.location.href = "./data-release/" + input + ".html";
+        }
+    }
+
+    // 3. Make the button work
+    document.getElementById("search-button").onclick = runSearch;
+
+    // 4. Make the "Enter" key work
+    document.getElementById("search-box").addEventListener("keypress", function (e) {
+        if (e.key === "Enter") { 
+            runSearch(); 
+        }
+    });
+</script>
+  </body>
+</html>
